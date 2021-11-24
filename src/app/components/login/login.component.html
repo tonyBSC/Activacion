@@ -1,0 +1,61 @@
+<div class="container">
+  <!-- <div class="login-form"> -->
+  <!-- <img loading="lazy" src="assets/img/slide/3.jpg" width="100vw" height="vh"> -->
+
+  <div class="container-form">
+      <img loading="lazy" src="assets/img/biomatic.png" lo class="img animate__animated animate__slideInDown">
+
+      <div class="my-alternate-theme animate__animated animate__slideInLeft">
+          <p class="title2">Iniciar Sesión</p>
+          <p class="subtitle">La <span style="color: white;">Evolución</span> para el crecimiento del <span style="color: white;">Camarón</span></p>
+          <form [formGroup]="loginFormGroup" style="padding: 40px">
+              <div class="inputs">
+                  <mat-icon class="icon">account_circle</mat-icon>
+                  <mat-form-field class="input">
+                      <mat-label>Usuario</mat-label>
+                      <input matInput formControlName="userCtrl" style="caret-color: white;">
+                  </mat-form-field>
+              </div>
+              <div class="inputs">
+                  <mat-icon class="icon">vpn_key</mat-icon>
+                  <mat-form-field class="input">
+                      <mat-label>Contraseña</mat-label>
+                      <input matInput formControlName="passwordCtrl" type="password" style="caret-color: white;">
+                  </mat-form-field>
+              </div>
+          </form>
+          <div style="width: 100%; text-align: center; padding-bottom: 15px;">
+              <button mat-raised-button color="accent" style="border-radius: 5px;" class="btn" (click)="login()" *ngIf="!progress">
+                    <span>Login</span>
+                </button>
+              <div *ngIf="progress" style="width: 100%; padding: 20px 15px;">
+                  <mat-spinner [color]="color" [diameter]="23" style="margin: 0 auto;"></mat-spinner>
+              </div>
+              <!-- <label class="forgot" (click)="forgot = !forgot; slide = 1">¿Olvidaste la contraseña?</label> -->
+          </div>
+      </div>
+
+      <!-- <div *ngIf="forgot" class="my-alternate-theme " [ngClass]="{'animate__animated animate__slideInRight': slide == 1}">
+          <p class="title">Reestablecer Contraseña</p>
+
+          <form [formGroup]="loginFormGroup" style="padding: 40px;">
+              <div class="inputs">
+                  <mat-icon class="icon">account_circle</mat-icon>
+                  <mat-form-field class="input">
+                      <mat-label>Usuario</mat-label>
+                      <input matInput formControlName="userCtrl" style="caret-color: white;">
+                  </mat-form-field>
+              </div>
+          </form>
+          <div style="width: 100%; text-align: center; padding-bottom: 15px;">
+              <button mat-raised-button color="accent" style="border-radius: 5px;" class="btn" (click)="reestablish()" *ngIf="!progress">
+                <span>Enviar</span>
+              </button>
+              <div *ngIf="progress" style="width: 100%; padding: 20px 15px;">
+                  <mat-spinner [color]="color" [diameter]="23" style="margin: 0 auto;"></mat-spinner>
+              </div>
+              <label class="forgot" (click)="forgot = !forgot; slide = 0">Volver a login</label>
+          </div>
+      </div> -->
+  </div>
+</div>
